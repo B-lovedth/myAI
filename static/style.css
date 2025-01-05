@@ -1,60 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    background-color: #f8f8f8;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
+.wrapper{
+    width: 100%;
+    max-width: 1270px;
+    background-color: #fdfdfd;
+    padding: 40px 30px;
+    border-radius: 30px;
+    height: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 h1 {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
+    color: #161515;
+    font-size: 2.5rem;
 }
 
 #chatbox {
     border: 1px solid #ddd;
     height: 300px;
     overflow-y: auto;
+    overflow-x: hidden;
     margin-bottom: 20px;
     padding: 10px;
+    flex-grow: 1;
+}
+.chat-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .message {
     margin: 10px 0;
+    max-width: 55%;
+    word-wrap: break-word;
 }
 
 #chat-form {
     display: flex;
-}
+    width: 100%;
+    position: relative;
 
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 3%;
+    top: 0;
+    transform: translateY(50%);
+}
 #user-input {
     flex: 1;
-    padding: 10px;
+    padding: 1.5rem 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 10px;
     margin-right: 10px;
+    padding-right: 6.5rem;
+    resize: none;
 }
 
+.speech-controls {
+    display: flex;
+    gap: 10px;
+}
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ac0404;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #790404;
 }
